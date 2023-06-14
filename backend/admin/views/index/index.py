@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from rest_framework.views import APIView
+from django.views import View
 
 
-class IndexView(APIView):
+class IndexView(View):
     def get(self, request):
         return render(request, 'index.html')
