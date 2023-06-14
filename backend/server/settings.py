@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.staticfiles',
+    'v1.apps.V1Config',
 ]
 
 MIDDLEWARE = [
