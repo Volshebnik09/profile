@@ -1,10 +1,14 @@
 import { Router } from "express";
-import routes from "./routes";
+import { createUserView } from "../views/user";
 
 let baseRouter = Router();
 
-baseRouter.all(routes.base, (req, res) => {
+baseRouter.all("", (req, res) => {
   return res.json("200");
 });
+
+//v1
+
+baseRouter.route("/v1/user").put(createUserView);
 
 export default baseRouter;
