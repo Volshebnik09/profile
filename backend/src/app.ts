@@ -14,6 +14,7 @@ app.use(baseRouter);
   // sync modeles
   await User.sync({
     alter: true,
+    logging: false,
   });
 
   app.listen(port, () => {
